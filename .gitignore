@@ -1,5 +1,6 @@
 /.settings
 /bin
+/data
 /target
 /.classpath
 /.project
