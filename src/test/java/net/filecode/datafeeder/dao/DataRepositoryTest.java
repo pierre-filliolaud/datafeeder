@@ -28,7 +28,6 @@ public class DataRepositoryTest {
     
     @Test
     public void shouldIndexSingleDataEntity(){
-
         Data data = new Data();
         data.setId("123455");
         data.setDescription("Spring Data Elasticsearch Test Article");

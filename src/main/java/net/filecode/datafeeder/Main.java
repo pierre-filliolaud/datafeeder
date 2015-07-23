@@ -17,12 +17,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-public class BootElastic implements CommandLineRunner {
+public class Main implements CommandLineRunner {
 
     @Autowired
     private DataService dataService;
 
-    private static final Logger logger = LoggerFactory.getLogger(BootElastic.class);
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     private void addSomeDatas() {
         Data starWars = getFirstData();
@@ -59,6 +59,6 @@ public class BootElastic implements CommandLineRunner {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(BootElastic.class, args);
+        SpringApplication.run(Main.class, args);
     }
 }
