@@ -1,2 +1,2 @@
 # datafeeder
-Engine to retrieve json data and store in elastic search database
+Engine to retrieve json data and store in Elastic Search database

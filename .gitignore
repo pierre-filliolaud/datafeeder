@@ -1,0 +1,12 @@
+/.settings
+/bin
+/target
+/.classpath
+/.project
+/.idea
+/main.iml
+/test.iml
+/atlassian-ide-plugin.xml
+/server.iml
+/server.ipr
+/server.iws
