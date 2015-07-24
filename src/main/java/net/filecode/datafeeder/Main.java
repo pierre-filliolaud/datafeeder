@@ -5,18 +5,19 @@ import java.util.List;
 import net.filecode.datafeeder.model.Data;
 import net.filecode.datafeeder.service.DataService;
 
+import org.apache.commons.lang.time.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
-@Configuration
-@EnableAutoConfiguration
-@ComponentScan
+//@Configuration
+//@EnableAutoConfiguration
+//@ComponentScan
+@SpringBootApplication
 public class Main implements CommandLineRunner {
 
     @Autowired
@@ -34,7 +35,7 @@ public class Main implements CommandLineRunner {
 
     private Data getSecondData() {
         Data secondData = new Data();
-        secondData.setId("2");
+        secondData.setId("3");
         secondData.setDescription("The Princess Bride");
         return secondData;
     }
@@ -59,6 +60,13 @@ public class Main implements CommandLineRunner {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(Main.class, args);
+        StopWatch stopWatch = new StopWatch();
+        logger.debug("STARTING STOPWATCH");
+        stopWatch.start();
+        @SuppressWarnings("unused")
+        ApplicationContext ctx = SpringApplication.run(Main.class, args);
+        logger.debug("STOPPING STOPWATCH");
+        stopWatch.stop();
+        logger.debug("Stopwatch time: " + stopWatch);
     }
 }

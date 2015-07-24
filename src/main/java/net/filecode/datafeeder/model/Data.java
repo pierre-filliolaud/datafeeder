@@ -3,7 +3,7 @@ package net.filecode.datafeeder.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "datas", type = "data", shards = 1, replicas = 0, refreshInterval = "-1", indexStoreType = "memory")
+@Document(indexName = "datas", type = "data")
 public class Data {
 
     @Id
@@ -11,10 +11,6 @@ public class Data {
 
     private String description;
     
-    public Data() {
-        // TODO Auto-generated constructor stub
-    }
-
     public void setId(String id) {
         this.id = id;
     }
