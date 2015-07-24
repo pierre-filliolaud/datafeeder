@@ -10,7 +10,7 @@ mvn eclipse:clean eclipse:eclipse -DdownloadSources=true -DdownloadJavadocs=true
 
 Installation
 ------------
-- install elastic search on your machine
+- install elastic search on your machine with node name: elasticsearch
 - run elastic search
 - run datafeeder project
 
